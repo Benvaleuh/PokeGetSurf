@@ -1,0 +1,108 @@
+{
+    "name": "Get HM-Surf",
+    "author": "K-MaN",
+    "path": [
+        {
+            "condition": [ "!hasItem", "HM03 - Surf" ],
+            "actions": [
+                {
+                    "condition": [ "!isSet", "Beat pika" ],
+                    "actions": [
+                        {
+                            "condition": [ "map", "Pokecenter Fuchsia" ],
+                            "action": [ "moveToMap", "Fuchsia City" ]
+                        },
+                        {
+                            "condition": [ "map", "Fuchsia City" ],
+                            "action": [ "moveToMap", "Fuchsia City Stop House" ]
+                        },
+                        {
+                            "condition": [ "map", "Fuchsia City Stop Hosue" ],
+                            "action": [ "moveToMap", "Route 19" ]
+                        },
+                        {
+                            "condition": [ "map", "Route 19" ],
+                            "action": [ "talkToNpcOnCell", [ 33, 19 ] ]
+                        }
+                    ]
+                },
+                {
+                    "condition": [ "isSet", "Beat pika" ],
+                    "actions": [
+                        {
+                            "condition": [ "map", "Route 19" ],
+                            "action": [ "moveToMap", "Fuchsia City Stop House" ]
+                        },
+                        {
+                            "condition": [ "map", "Fuchsia City Stop House" ],
+                            "action": [ "moveToMap", "Fuchsia City" ]
+                        },
+                        {
+                            "condition": [ "map", "Pokecenter Fuchsia" ],
+                            "action": [ "moveToMap", "Fuchsia City" ]
+                        },
+                        {
+                            "condition": [ "map", "Fuchsia City" ],
+                            "action": [ "moveToMap", "Safari Stop" ]
+                        },
+                        {
+                            "condition": [ "map", "Safari Stop" ],
+                            "action": [ "talkToNpcOnCell", [ 7, 4 ] ]
+                        },
+                        {
+                            "condition": [ "map", "Safari Entrance" ],
+                            "action": [ "moveToMap", "Safari Area 1" ]
+                        },
+                        {
+                            "condition": [ "map", "Safari Area 1" ],
+                            "action": [ "moveToMap", "Safari Area 2" ]
+                        },
+                        {
+                            "condition": [ "map", "Safari Area 2" ],
+                            "action": [ "moveToMap", "Safari Area 3" ]
+                        },
+                        {
+                            "condition": [ "map", "Safari Area 3" ],
+                            "action": [ "moveToMap", "Safari House 4" ]
+                        },
+                        {
+                            "condition": [
+                                "all",
+                                [ "map", "Safari House 4" ],
+                                [ "isNpcOnCell", [ 11, 3 ] ]
+                            ],
+                            "action": [ "talkToNpcOnCell", [ 11, 3 ] ]
+                        }
+                    ]
+                }
+            ]
+        },
+        /*{
+            "actions": [
+                {
+                    "condition": [ "map", "Map 5 goes here" ],
+                    "action": [ "moveToMap", "Map 4 goes here" ]
+                },
+                {
+                    "condition": [ "map", "Map 4 goes here" ],
+                    "action": [ "moveToMap", "Map 3 goes here" ]
+                },
+                {
+                    "condition": [ "map", "Map 3 goes here" ],
+                    "action": [ "moveToMap", "Map 2 goes here" ]
+                },
+                {
+                    "condition": [ "map", "Map 2 goes here" ],
+                    "action": [ "moveToMap", "Pokecenter goes here" ]
+                },
+                {
+                    "condition": [ "map", "Pokecenter goes here" ],
+                    "action": [ "usePokeCenter" ]
+                }
+            ]
+        }*/
+    ],
+            "switches": [
+                [ "Beat pika", "There is something there I want you to take" ]
+            ]
+        }
