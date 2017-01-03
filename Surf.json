@@ -17,7 +17,7 @@
                             "action": [ "moveToMap", "Fuchsia City Stop House" ]
                         },
                         {
-                            "condition": [ "map", "Fuchsia City Stop Hosue" ],
+                            "condition": [ "map", "Fuchsia City Stop House" ],
                             "action": [ "moveToMap", "Route 19" ]
                         },
                         {
